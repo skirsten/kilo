@@ -13,8 +13,8 @@ endif
 RELEASE_BINS := $(addprefix bin/release/kgctl-, $(addprefix linux-, $(ALL_ARCH)) darwin-amd64 darwin-arm64 windows-amd64)
 PROJECT := kilo
 PKG := github.com/squat/$(PROJECT)
-REGISTRY ?= index.docker.io
-IMAGE ?= squat/$(PROJECT)
+REGISTRY ?= ghcr.io
+IMAGE ?= skirsten/$(PROJECT)
 FULLY_QUALIFIED_IMAGE := $(REGISTRY)/$(IMAGE)
 
 TAG := $(shell git describe --abbrev=0 --tags HEAD 2>/dev/null)
